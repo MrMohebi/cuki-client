@@ -1,0 +1,124 @@
+*{
+    font-family: IRANSansMobile_Light;
+}
+#reportMain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    background:white;
+    position: relative;
+}
+.orderReportPriceTotal{
+    font-family: IRANSansMobile_med;
+}
+.priceOrange{
+    color: #FAA21B;
+}
+.iransans{
+    font-family: IRANSansMobile_med;
+}
+
+.reportEachTable{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 30% 40% 20%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.reportHolders{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+.reportholdersAndPrices{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+}
+.orderNumberImg {
+    height: 30px;
+    width: 30px;
+    background:url("../img/ordernum.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -15px;
+}
+.orderAddressImg {
+    height: 30px;
+    width: 30px;
+    background:url("../img/address.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -15px;
+}
+.orderTimeImg {
+    height: 30px;
+    width: 30px;
+    background:url("../img/time.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -15px;
+}
+#reportOrders{
+    height: 50%;
+    width: 100%;
+    margin-top: 25px;
+    overflow: scroll;
+}
+#reportDetails{
+    height: 60%;
+    width: 100%;
+    padding:  20px 30px 100px 30px;
+    display: flex;
+    flex-flow: column;
+    font-size: 4vw;
+    overflow: scroll;
+}
+@media only screen and (min-width: 400px){
+    #reportDetails{
+        height: 60%;
+        width: 100%;
+        padding:  20px 30px 100px 30px;
+        display: flex;
+        flex-flow: column;
+        font-size: 15px;
+        overflow: scroll;
+
+    }
+}
+#reportEachOrder{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+#trackingIdLabel{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: normal;
+
+}
+#reportDetailsText{
+    padding-right: 10px;
+    line-height: 25px;
+}
+#detailContent{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 28px;
+}
+#ordersEndLine{
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    bottom: 0;
+    opacity: 0.2;
+}

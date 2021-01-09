@@ -1,0 +1,35 @@
+#splashMain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    background: white;
+
+}
+
+#splashImg{
+    height: 130px;
+    width: 130px;
+    background:url("../img/logo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: center;
+    margin-top: 100px;
+
+}
+
+#splashVector{
+    height: 40vw;
+    max-height: 300px;
+    max-width: 600px;
+    width: 90vw;
+    position: absolute;
+    background:url("../img/vector.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: center;
+    bottom: 0;
+
+}

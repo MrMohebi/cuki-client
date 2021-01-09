@@ -1,0 +1,332 @@
+#main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    background: white;
+}
+
+#offCodeInput::placeholder {
+    opacity: 1; /* Firefox */
+}
+
+#offCodeInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+
+#offCodeInput::-ms-input-placeholder { /* Microsoft Edge */
+}
+
+.billHeader {
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.billHeaderText{
+    font-size: 25px;
+    font-family: IRANSans !important;
+}
+.orange{
+    color: #FAA21B;
+}
+
+#totalPlaceHolder {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+    font-family: IRANSans;
+    font-size: 18px;
+}
+
+#price {
+    width: 100%;
+    text-align: center;
+    font-family: IRANSans;
+    font-size: 18px;
+}
+
+#headerLeftSide {
+    width: 50%;
+}
+
+#headerRightSide {
+
+    width: 50%;
+}
+
+#content {
+    height: calc(100% - 70px);
+    width: 100%;
+    text-align: center;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+#imgContainer {
+    width: 100%;
+    height: 100%;
+    background: url("../img/billVector.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+.priceMinPlus{
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#eachorderContainer {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: right;
+    height: 100px;
+    width: 80%;
+    background-color: #fef2ff;
+    transition: background-color 0.2s ease;
+    border-radius: 30px;
+    box-shadow: -1px 2px 7px 0px #dadada;
+
+    margin: 10px auto;
+}
+
+#order {
+    width: 100%;
+    height: 55px;
+    background: linear-gradient(#333333, #1B1818);
+    border-radius: 15px;
+    align-self: center;
+    display: flex;
+    flex-flow: row;
+}
+
+#minus {
+    align-self: center;
+    margin-right: 10px;
+}
+
+#leftAngle {
+    align-self: center;
+    margin-right: 10px;
+
+
+}
+
+#plus {
+    align-self: center;
+    margin-left: 10px;
+}
+
+#RightAngle {
+    align-self: center;
+    margin-left: 10px;
+
+
+}
+
+#orderLeftSide {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#orderRightSide {
+    height: 100%;
+    width: 50%;
+    color: white;
+    display: flex;
+}
+
+#orderName {
+    width: 100%;
+    align-self: center;
+}
+.billEachFoodName{
+    font-family: IRANSansMobile_med;
+    white-space: nowrap;
+}
+.billEachFoodPrice{
+    padding-top: 10px;
+    font-family: IRANSansMobile_med;
+}
+.eachFoodContainerBill{
+    align-items: center;
+    text-align: right;
+    height: 95px;
+    width: 94%;
+    margin-left: 5px;
+    transition: background-color 0.2s ease;
+    border-radius: 30px;
+    /* padding-right: 80px; */
+    overflow: hidden;
+    /* padding-top: 10px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: -1px 2px 7px 0px #dadada;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    margin-left: auto;
+    overflow-x: scroll;
+    margin-right: auto;
+}
+
+
+#orderPrice {
+    color: #FF9200;;
+}
+
+#orderNumber {
+    color: white;
+    font-size: 10px;
+}
+
+#billImage {
+    bottom: 0;
+    background: url('../img/Image.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    z-index: 20;
+    height: 100px;
+    align-self: end;
+    background-position: right;
+}
+
+#offCodeContainer {
+    text-align: center;
+    display: flex;
+    flex-flow: row-reverse;
+    z-index: 9999;
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+
+
+}
+
+#offCodeRight {
+    display: flex;
+    flex-flow: column;
+    width: 70%;
+    height: 100%;
+}
+
+#offCodeLeft {
+    width: 30%;
+    display: flex;
+    flex-flow: inherit;
+}
+
+#offCodeInput {
+    background: linear-gradient(#333333, #1B1818);
+    border-radius: 13px;
+    align-self: center;
+    height: 40px;
+    width: 150px;
+    outline: none;
+    border: none;
+    text-align: center;
+    color:#FF9200 ;
+
+}
+
+#offCodePlaceholder {
+    color: orange;
+}
+.totalPriceHolder{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+}
+.billTotalPrice{
+    font-family: IRANSans;
+}
+
+#offCodeSubmitButton {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    outline: none;
+    border: none;
+    align-self: flex-end;
+    background: url("../img/check.png"), linear-gradient(#333333, #1B1818);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 13px;
+}
+.eachFoodImageBill{
+    border-radius: 35px;
+    width: 70px;
+    height: 70px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    object-fit: cover;
+    min-width: 70px;
+    min-height: 70px;
+}
+.foodNameAndPrice{
+    display: flex;
+    flex-flow: column;
+    width: 90px;
+    justify-content: end;
+    margin-right: 5px;
+    margin-left: 30px;
+    padding-left: -10px;
+    margin-right: 10px;
+    align-items: flex-end;
+}
+.foodNumber{
+    height: 25px;
+
+    background-color: #2E3232;
+    color:#F49B04 ;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 5px 3px 0 3px;
+    font-family: IRANSansMobile_med;
+    font-size: 14px;
+}
+
+.billSubmitButton {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    outline: none;
+    background-color:#F49B04;
+    font-size: 22px;
+    border:none;
+    color: white;
+    border-radius: 10px;
+}
+#foods{
+    height: calc(100% - 270px);
+    width: 100%;
+    overflow: scroll;
+}
+
+
+
+

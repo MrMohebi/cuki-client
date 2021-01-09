@@ -1,0 +1,14 @@
+.signupContainer {
+    height: 100%;
+}
+
+.svec {
+    width: 60vw;
+    margin: auto;
+    height: 60vw;
+    background: url("../img/sVector.png");
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-top: 20px;
+}

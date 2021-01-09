@@ -1,0 +1,127 @@
+*{
+    user-select: none !important;
+}
+#mainMore{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    z-index: 99;
+}
+#main{
+    user-select: none;
+    transition: 0.2s;
+
+
+}
+
+#mainSquare{
+    max-width: 360px;
+    width: 90%;
+    height: 360px;
+    background-color: white;
+    margin:auto;
+    align-self: center;
+    border-radius: 25px;
+
+    text-align: center;
+
+}
+#moreDetailsImg{
+    height: 85px;
+    width: 85px;
+    margin: auto;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-top: 10px !important;
+}
+
+#foodName{
+    font-size: 30px;
+}
+
+#foodDetailsPlaceHolder{
+    color: #B11338;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: -15px;
+}
+#detailsMoreDetails{
+    font-size: 12px;
+    margin-top: -10px;
+    padding: 0 10px;
+}
+
+#timesOrdered{
+    display: flex;
+    flex-flow: row;
+    height: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+#timesOrderedLeft{
+    width: 25vw;
+    text-align: right;
+    font-size: 12px;
+    color: #387E46;
+    direction: rtl;
+}
+
+#timesOrderedRight {
+    width: 55vw;
+    font-size: 12px;
+    text-align: center;
+    direction: rtl;
+
+}
+
+
+#deliveryTime{
+    display: flex;
+    flex-flow: row;
+    height: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+#deliveryTimeLeft{
+    width: 25vw;
+    text-align: right;
+    font-size: 12px;
+    color: #387E46;
+    direction: rtl;
+}
+
+#deliveryTimeRight {
+    width: 55vw;
+    font-size: 12px;
+    text-align: center;
+    direction: rtl;
+
+}
+
+#moreDetailPrice{
+    width: 88%;
+    height: 30px;
+    background-color: #455a64;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.75)!important;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    bottom: 0;
+    margin-top: 20px;
+}
+#priceText{
+    color: white;
+    font-size:18px;
+    align-self: center;
+}
+#priceNumber{
+    color: white;
+    font-size:20px;
+    align-self: center;
+}

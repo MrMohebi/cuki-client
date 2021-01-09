@@ -1,0 +1,67 @@
+.tableReserveMain{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+.BackContainer{
+    width: 100%;
+    padding: 10px 0 0 10px;
+}
+.tableReserveTable{
+    width: 80%;
+    margin: 10px auto 0 auto;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 20px;
+    text-align: center;
+}
+.tableReserveTableNoMargin{
+    width: 80%;
+    margin: 0px auto 0 auto;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 20px;
+    text-align: center;
+
+}
+.upDownContainers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listsAndButtons{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+}
+.btnAdd{
+    width: 90px;
+
+}
+#submitFinal{
+    margin-top: 30px;
+}
+.eachTableReserved{
+   border-right: solid #c9c7c5;
+    border-left: solid #c9c7c5;
+
+}
+.firstRowEachTable{
+    border-right: solid #c9c7c5;
+    border-left: solid #c9c7c5;
+
+}
+.firstRowEachTableCenter {
+
+
+}

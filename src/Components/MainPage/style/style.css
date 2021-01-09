@@ -1,0 +1,213 @@
+
+.resAndCof {
+    width: 40px;
+    display: flex;
+    flex-flow: column;
+    height: 80px;
+    margin-right: 5px;
+    background-color: #FFC1C1;
+    border-radius: 20px;
+    border: solid 0.5px rgba(62, 62, 62, 0.1);
+    margin-top: 5px;
+    z-index: 99;
+}
+
+.headerLOGO {
+    background: url("../img/logo.png");
+    background-position: center !important;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    margin: 5px 10px;
+    margin-top: -2px;
+}
+
+.restaurantButton {
+    background: url("../img/restaurant.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cafeButton {
+    background: url("../img/cafe.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.mainHeader {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.moreOptions {
+    background: url("../img/more.png");
+    background-position: center !important;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+#moreContainer {
+    display: none;
+}
+
+.selectedCategory {
+    background-color: orange;
+}
+
+.category {
+    background: transparent !important;
+}
+
+#notificationNumber {
+    color: white;
+    text-align: left;
+    padding-left: 8px;
+    background-color: orangered;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+#star {
+    width: 30px;
+    height: 30px;
+    background: url('../img/star.png') center no-repeat;
+    background-size: 90%;
+    margin: 5px 0 0 0;
+    background-color: #be9473;
+    border-radius: 10px 0 0 10px;
+    filter: invert(1);
+
+
+}
+
+.eachFoodMainContainerStyle {
+    flex-flow: row;
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+}
+
+#coffeeShop {
+    background: url("../img/coffeeShop.png")
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    .eachFoodContainer {
+        padding-right: 20px !important;
+    }
+
+    .eachFoodImageContainer {
+        display: none;
+
+    }
+}
+
+.eachFoodContainer {
+    text-align: right;
+    height: 95px;
+    width: 100%;
+    background-color: #fef2ff;
+    margin-left: 5px;
+    transition: background-color 0.2s ease;
+    border-radius: 30px;
+    padding-right: 80px;
+    overflow: hidden;
+    padding-top: 10px;
+    box-shadow: -1px 2px 7px 0px #dadada;
+}
+
+
+.eachFoodImageContainer {
+    width: 70px;
+    height: 70px;
+    margin-left: -72px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+.topFiveText {
+    font-family: IRANSansMobile_med !important;
+}
+
+.foodNameMain {
+    font-family: IRANSansMobile_med !important;
+}
+
+
+.eachFoodDetails {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 32px;
+    overflow-wrap: break-word;
+    direction: rtl;
+    float: right;
+    font-size: 8px;
+    text-align: right;
+    word-break: break-word;
+    padding-left: 20%;
+    font-weight: bolder;
+
+}
+
+.eachFoodPrice {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 18px;
+    color: #FAA21B;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.animateBill {
+    animation: mymove 1s infinite;
+    animation-play-state: running;
+}
+
+.submitRed {
+    color: #FF4242;
+}
+
+#restaurant {
+    background: url('../img/restaurant.png')
+
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.5)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0.5)
+    }
+}
+
+/*style={{fontSize:"30px",textAlign:'left',paddingLeft:'10px',color:'#11C214'}}*/

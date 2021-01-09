@@ -1,0 +1,258 @@
+*{
+    scroll-behavior: smooth;
+}
+.responsive-calendar{
+    top: 50%;
+}
+.inputName{
+    border:none;
+    border-bottom:solid 1px grey;
+    padding-right:30px !important;
+    background:url("../img/name.png");
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    margin-top: 10px;
+}
+.green{
+    color: #12A562;
+}
+
+
+.inputJob{
+    border:none;
+    border-bottom:solid 1px grey;
+    padding-right:30px !important;
+    background:url("../img/job.png");
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    margin-top: 35px;
+
+}
+.btnContainer{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+}
+.inputBirthday {
+    border: none;
+    border-bottom: solid 1px grey;
+    padding-right: 30px !important;
+    background: url("../img/birthday.png");
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    margin-top: 35px;
+}
+.totalbuy{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.ordersProfile{
+    background-color: #E3E7E8;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 0 5px;
+}
+
+.ProfileHeaderText{
+    font-size:20px;
+    font-family: IRANSans;
+}
+
+.ProfileOrders{
+    display: flex;
+    overflow: scroll;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+
+.totals{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+}
+.orderProfileBottom {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding: 0 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+    bottom: 0;
+}
+.orderFoodList{
+
+    font-size: 13px;
+    height: 60px;
+    width: 110px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    padding: 10px 10px;
+    text-align: right;
+    font-family: IRANSansMobile_Light;
+    font-size: 10px;
+    max-height: 110px;
+}
+#headerProfile{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.containerFixer{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden !important;
+}
+.report-box {
+    min-width: 140px;
+    width: 140px;
+    height: 160px;
+    background: #d7e4db;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    border-radius: 15px;
+    margin: 0 5px;
+}
+.report-box-header {
+    background: #176e2a;
+    border-radius: 5px;
+    color: white;
+}
+.report-box-price {
+    color: #176e2a;
+    border-top-width: 1px;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-style: solid;
+    border-color: darkgray;
+}
+
+.discount-box {
+
+    color: white;
+    font-size: 14px;
+    width: 150px;
+    background: #3d4c53;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+#mainProfileToBlur{
+    transition: all 0.2s;
+}
+#profileHeader{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+
+.discount-box-header {
+    background: #e8505c;
+    border-radius: 5px;
+    color: white;
+}
+
+#logOut{
+    float: right;
+}
+#logOutText{
+    font-family: IRANSansMobile_Light;
+}
+#orderMoreDetails{
+    display: none;
+    width: 80vw;
+    overflow: hidden;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 100px;
+    z-index: 9999;
+    border-radius: 10px;
+    opacity: 0;
+    overflow: hidden;
+    box-shadow:0 1rem 3rem rgba(0,0,0,.175)!important
+}
+
+#orderMoreDetailsHeader{
+    width: 100%;
+    height: 30px;
+    background-color: #186D2E;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+#orderMoreDetailsFirstRow{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 45% 10% 20% 25%;
+    text-align: center;
+    font-size: 70%;
+    background-color: rgba(99,99,99,0.2);
+
+}
+#orderMoreDetailsFirstRow div {
+    border-right: solid 0.5px gray;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#orderMoreDetailsFoodRow div {
+    border-left: solid 0.5px gray;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#orderMoreDetailsFoodRows{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 45% 10% 20% 25%;
+    text-align: center;
+    font-size: 70%;
+    background-color: rgba(86,208,123,0.17);
+}
+#orderMoreDetailsFoodRows div {
+border-right: solid 0.5px gray;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+table, td, th {
+    border: 1px solid #ddd;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+
+}
+

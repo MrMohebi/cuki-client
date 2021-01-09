@@ -1,0 +1,408 @@
+.mainContainer-payWay{
+    background: white;
+    overflow: scroll;
+    height: 100%;
+}
+.payMain {
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: 100%;
+    margin-bottom: 100px;
+}
+.tableNumberInput{
+    border-radius: 13px;
+    width: 80px;
+    /*border:solid 0.5px rgba(112, 112, 112, 0.5);*/
+    border:none;
+    text-align: center;
+    padding-top: 7px;
+    margin-top: 10px;
+    outline: none;
+    background-color: rgba(255, 66, 66, 0.09);
+
+}
+.tableNumberOrAddressContainer{
+margin-top: 20px;
+}
+
+.inResFields{
+    padding:0 20px;
+    text-align: right;
+    transition: all 0.5s ease;
+}
+.priceFields{
+    text-align: right;
+}
+.outResFields{
+    height: 0px;
+    opacity: 0;
+    pointer-events: none;
+    height: 70px;
+    padding:0 20px;
+    text-align: right;
+    transition: all 0.5s ease;
+}
+.dongTable{
+    overflow: scroll;
+    pointer-events: none;
+    height: 0px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin:10px 15px;
+    padding:0;
+    transition: all 0.5s ease;
+}
+.switchContainer{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: IRANSansMobile_med !important;
+}
+.switchContainerInOut{
+    margin-top: 20px;
+    width: 100%;
+    font-family: IRANSansMobile_med !important;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: right;
+    padding-right: 20px;
+}
+.switchWrapperPay {
+    width: 40%;
+    height: 35px;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    padding: 2px 2px 2px 2px;
+}
+.switchWrapperInOut{
+    width: 60%;
+    height: 35px;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    padding: 2px 2px 2px 2px;
+    right: 0;
+}
+.switchWrapperDong {
+    width: 40%;
+    height: 35px;
+    opacity: 0;
+    pointer-events: none;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    padding: 2px 2px 2px 2px;
+    transition: all 0.5s ease;
+}
+.addressInput{
+    border-radius: 10px;
+    width: 70%;
+    min-height: 60px;
+    /*border:solid 0.5px rgba(112, 112, 112, 0.5);*/
+    border: none;
+    text-align: right;
+    padding-top: 7px;
+    padding-right: 10px;
+    margin-top: 10px;
+    outline: none;
+    background-color: rgba(255, 66, 66, 0.09);
+    direction: rtl;
+
+}
+.dongTableEachRow div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: IRANSansMobile_med !important;
+    font-size: 12px;
+
+}
+.totalPriceOfOrder{
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.payWayTextHolder{
+    margin-top: 20px;
+    padding-right: 10px;
+    width: 100%;
+    text-align: right;
+    font-family: IRANSansMobile_med;
+}
+.submitButtonContainer{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-end;
+    bottom: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.submitButton{
+    color: white;
+    font-family: IRANSansMobile_med;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+    width: 80%;
+    height: 40px;
+    background-color: rgba(255, 66, 66, 0.83);
+    border: solid 0.5px rgba(82, 82, 82, 0.2);
+    border-radius: 8px;
+    height: 60px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99;
+}
+.dongNumberOfFoodsInput{
+    width: 25px;
+    height: 25px;
+    border: #FAA21B solid 1px;
+    text-align: center;
+    padding-top: 1px;
+    outline: none;
+    font-size: 10px;
+
+}
+.waysToPay{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+
+}
+.dongTableFirsRow{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 20% 40% 20% 25%;
+    text-align: center;
+    font-size: 13px;
+
+}
+
+.dongTableFirsRow div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: IRANSansMobile_med !important;
+
+}
+
+.dongTableEachRow{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 20% 40% 20% 25%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.backButton{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-image: url("../img/back.png");
+    z-index: 99;
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#payHeader {
+    height: 50px;
+    width: 100%;
+    background: #EFD5D8;
+    border-bottom: solid gray .5px;
+    display: flex;
+    flex-flow: row;
+
+}
+
+#wayHolderLine {
+    width: 100%;
+    height: 0.7px;
+    background-color: #342525;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#wayHolder {
+    height: 30px;
+    width: 80%;
+    background-color: #2F333B;
+    align-self: center;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#wayHolderElements {
+    align-self: center;
+    line-height: 30px;
+    color: white;
+    font-size: 3vw;
+}
+
+#waySection {
+    height: 90px;
+    width: 70%;
+    border: solid 1px #707070;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+}
+
+#onlineButton {
+    width: 98px;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: solid #707070 0.5px;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: #fff;
+    transition: 0.2s;
+    transition-timing-function: ease;
+}
+
+#offlineButton {
+    width: 98px;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: solid #707070 0.5px;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: #fff;
+    transition: 0.2s;
+    transition-timing-function: ease;
+}
+
+#inOutSection {
+    height: 90px;
+    width: 70%;
+    border-right: solid 1px #707070;
+    border-left: solid 1px #707070;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    overflow-wrap: break-word;
+}
+
+#inRestaurant {
+    width: 98px;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: solid #707070 0.5px;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: #fff;
+    font-size: 14px;
+    transition: 0.2s;
+    transition-timing-function: ease;
+}
+
+#outRes {
+    width: 98px;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: solid #707070 0.5px;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: #fff;
+    transition: 0.2s;
+
+}
+
+#tableInput {
+    width: 98px;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: rgba(255, 66, 66, 0.09);
+    text-align: center;
+    display: none;
+    opacity: 0;
+
+}
+
+#tablePlaceholder {
+    align-self: center;
+    display: none;
+    opacity: 0;
+
+}
+.react-switch-selector-option-label{
+    padding-top: 10px;
+}
+
+#tableSection {
+    width: 70%;
+    border: solid 1px #707070;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    border-right: solid #707070 0.5px;
+    border-left: solid #707070 0.5px;
+    border-bottom: solid #707070 0.5px;
+    border-top: none;
+    padding-bottom: 20px;
+}
+
+#addressInput {
+    width: 95%;
+    height: 35px;
+    align-self: center;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    background-color: rgba(255, 66, 66, 0.09);
+    text-align: center;
+    display: none;
+    opacity: 0;
+
+}
+
+#submitPaySection {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#submitPay {
+    width: 95%;
+    border: none;
+    background:transparent;
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 500px) {
+    #wayHolderElements {
+        font-size: 20px !important;
+    }
+
+}
