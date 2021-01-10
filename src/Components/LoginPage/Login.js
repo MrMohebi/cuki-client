@@ -79,100 +79,141 @@ class Login extends React.Component {
 
     }
 
-    bigPage =
-        <div className="app" style={{height: "100%", textAlign: "center"}}>
-            <Swipeable onSwipedDown={() => {
-                this.props.frontStatesPageSize("small")
-            }} preventDefaultTouchmoveEvent={true}>
-                <div className="contain " style={{width: "100%", position: "absolute", bottom: "0", height: "100%"}}>
-                    <div className="inside" style={bigMainContainerStyle}>
-                        {/*<Header />*/}
-                        <div className='headerOfLogin'>
-                            <div className='userIcon'></div>
-                            <p style={{
-                                paddingTop: "5px",
-                                fontFamily: "IRANSansMobile_Light",
-                                userSelect: "none"
-                            }}>ورود/ثبت
-                                نام</p>
-                        </div>
-                        <div className='loginVector'></div>
-
-                        <p style={{
-                            paddingTop: "20px",
-                            fontSize: "15px",
-                            fontFamily: "IRANSansMobile_Light",
-                            userSelect: "none"
-                        }}>
-                            لطفا شماره ی خود را وارد کنید
-
-                        </p>
-                        <form onSubmit={this.handleSubmit}>
-                            <input className={this.state.inputclass} id="numin" type="number" style={inputStyle}
-                                   onChange={this.handleInputChange}
-                                   placeholder="09---------"/>
-                            <br/>
-                            <button id="button" type="submit" className="btn" style={bigButtonStyle}> ارسال کد</button>
-                        </form>
-
-                    </div>
-                </div>
-            </Swipeable>
-            <BottomNavigation/>
-        </div>
-    smallPage =
-        <div className="app" style={{height: "100%", textAlign: "center"}}>
-            <Swipeable onSwipedUp={() => {
-                this.props.frontStatesPageSize("big")
-            }} preventDefaultTouchmoveEvent={true}>
-                <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",}}>
-                    <div className="aa" style={smallMainContainerStyle}>
-                        {/*<Header />*/}
-
-                        {/*<div className="d-flex justify-content-between" style={topOfMainStyle}>*/}
-                        {/*    <div style={logoStyle} />*/}
-                        {/*    <div style={avatarStyle} />*/}
-                        {/*    <div style={menuIconStyle} />*/}
-                        {/*</div>*/}
-                        <div className='headerOfLogin'>
-                            <div className='userIcon'></div>
-                            <p style={{
-                                paddingTop: "5px",
-                                fontFamily: "IRANSansMobile_Light",
-                                userSelect: "none"
-                            }}>ورود/ثبت
-                                نام</p>
-                        </div>
-
-                        <p style={{
-                            paddingTop: "5px",
-                            fontSize: "15px",
-                            fontFamily: "IRANSansMobile_Light",
-                            userSelect: "none"
-                        }}>
-                            لطفا شماره ی خود را وارد کنید
-                        </p>
-                        <form onSubmit={this.handleSubmit}>
-                            <input className={this.state.inputclass} id="numin" type="number" style={inputStyle}
-                                   onChange={this.handleInputChange}
-                                   placeholder="09---------"/>
-                            <br/>
-                            <button id="button" type="submit" className="btn" style={smallButtonStyle}> ارسال کد
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </Swipeable>
-            <BottomNavigation/>
-        </div>
+    // bigPage =
+    //     <div className="app" style={{height: "100%", textAlign: "center"}}>
+    //         <Swipeable onSwipedDown={() => {
+    //             this.props.frontStatesPageSize("small")
+    //         }} preventDefaultTouchmoveEvent={true}>
+    //             <div className="contain " style={{width: "100%", position: "absolute", bottom: "0", height: "100%"}}>
+    //                 <div className="inside" style={bigMainContainerStyle}>
+    //                     {/*<Header />*/}
+    //                     <div className='headerOfLogin'>
+    //                         <div className='userIcon'></div>
+    //                         <p style={{
+    //                             paddingTop: "5px",
+    //                             fontFamily: "IRANSansMobile_Light",
+    //                             userSelect: "none"
+    //                         }}>ورود/ثبت
+    //                             نام</p>
+    //                     </div>
+    //                     <div className='loginVector'></div>
+    //
+    //                     <p style={{
+    //                         paddingTop: "20px",
+    //                         fontSize: "15px",
+    //                         fontFamily: "IRANSansMobile_Light",
+    //                         userSelect: "none"
+    //                     }}>
+    //                         لطفا شماره ی خود را وارد کنید
+    //
+    //                     </p>
+    //                     <form onSubmit={this.handleSubmit}>
+    //                         <input className={this.state.inputclass} id="numin" type="number" style={inputStyle}
+    //                                onChange={this.handleInputChange}
+    //                                placeholder="09---------"/>
+    //                         <br/>
+    //                         <button id="button" type="submit" className="btn" style={bigButtonStyle}> ارسال کد</button>
+    //                     </form>
+    //
+    //                 </div>
+    //             </div>
+    //         </Swipeable>
+    //         <BottomNavigation/>
+    //     </div>
+    // smallPage =
+    //     <div className="app" style={{height: "100%", textAlign: "center"}}>
+    //         <Swipeable onSwipedUp={() => {
+    //             this.props.frontStatesPageSize("big")
+    //         }} preventDefaultTouchmoveEvent={true}>
+    //             <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",}}>
+    //                 <div className="aa" style={smallMainContainerStyle}>
+    //                     {/*<Header />*/}
+    //
+    //                     {/*<div className="d-flex justify-content-between" style={topOfMainStyle}>*/}
+    //                     {/*    <div style={logoStyle} />*/}
+    //                     {/*    <div style={avatarStyle} />*/}
+    //                     {/*    <div style={menuIconStyle} />*/}
+    //                     {/*</div>*/}
+    //                     <div className='headerOfLogin'>
+    //                         <div className='userIcon'></div>
+    //                         <p style={{
+    //                             paddingTop: "5px",
+    //                             fontFamily: "IRANSansMobile_Light",
+    //                             userSelect: "none"
+    //                         }}>ورود/ثبت
+    //                             نام</p>
+    //                     </div>
+    //
+    //                     <p style={{
+    //                         paddingTop: "5px",
+    //                         fontSize: "15px",
+    //                         fontFamily: "IRANSansMobile_Light",
+    //                         userSelect: "none"
+    //                     }}>
+    //                         لطفا شماره ی خود را وارد کنید
+    //                     </p>
+    //                     <form onSubmit={this.handleSubmit}>
+    //                         <input className={this.state.inputclass} id="numin" type="number" style={inputStyle}
+    //                                onChange={this.handleInputChange}
+    //                                placeholder="09---------"/>
+    //                         <br/>
+    //                         <button id="button" type="submit" className="btn" style={smallButtonStyle}> ارسال کد
+    //                         </button>
+    //                     </form>
+    //                 </div>
+    //             </div>
+    //         </Swipeable>
+    //         <BottomNavigation/>
+    //     </div>
 
     render() {
+        return(
+            <div className="app" style={{height: "100%", textAlign: "center"}}>
+                <Swipeable onSwipedDown={() => {
+                    this.props.frontStatesPageSize("small")
+                }} preventDefaultTouchmoveEvent={true}>
+                    <div className="contain " style={{width: "100%", position: "absolute", bottom: "0", height: "100%"}}>
+                        <div className="inside" style={bigMainContainerStyle}>
+                            <div className='headerOfLogin'>
+                                <div className='userIcon'></div>
+                                <p style={{
+                                    paddingTop: "5px",
+                                    fontFamily: "IRANSansMobile_Light",
+                                    userSelect: "none"
+                                }}>ورود/ثبت
+                                    نام</p>
+                            </div>
+                            <div className='loginVector'></div>
 
-        if (this.props.pageSize === 'small') {
-            return (this.smallPage)
-        } else {
-            return (this.bigPage)
-        }
+                            <p style={{
+                                paddingTop: "20px",
+                                fontSize: "15px",
+                                fontFamily: "IRANSansMobile_Light",
+                                userSelect: "none"
+                            }}>
+                                لطفا شماره ی خود را وارد کنید
+
+                            </p>
+                            <form onSubmit={this.handleSubmit}>
+                                <input className={this.state.inputclass} id="numin" type="number" style={inputStyle}
+                                       onChange={this.handleInputChange}
+                                       placeholder="09---------"/>
+                                <br/>
+                                <button id="button" type="submit" className="btn" style={bigButtonStyle}> ارسال کد</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </Swipeable>
+                <BottomNavigation/>
+            </div>
+        )
+
+        // if (this.props.pageSize === 'small') {
+        //     return (this.smallPage)
+        // } else {
+        //     return (this.bigPage)
+        // }
     }
 
 }

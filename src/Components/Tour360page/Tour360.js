@@ -29,7 +29,6 @@ class Tour360 extends React.Component{
         })
     }
     render() {
-        console.log(window.location.pathname);
         //if(['/main', '/login', '/vcode', '/signup'].includes(window.location.pathname)){
             return (
                 <div style={{width:"100%", height:"100%",position:'fixed',zIndex:'0'}} >

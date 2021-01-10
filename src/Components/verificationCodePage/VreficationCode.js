@@ -62,54 +62,79 @@ class VerificationCode extends React.Component {
      }
 
     render() {
-        if(this.props.pageSize === "small"){
-            return (this.smallPage)
-        }else {
-            return (this.bigPage)
-        }
+        return (
+            <div className="app" style={{height: "100%", textAlign: "center",transition:'0.2s ease'}}>
+
+                <Swipeable onSwipedDown={()=>{this.props.frontStatesPageSize("small")}} preventDefaultTouchmoveEvent={true}>
+                    <div style={{height:"20px"}}/>
+                    <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",height:'100%'}}>
+                        <div className="" style={bigMainContainerStyle}>
+                            {/*<Header/>*/}
+                            <div className='headerOfLogin'>
+                                <div className='userIcon'/>
+                                <p style={{paddingTop: "5px", fontFamily: "IRANSansMobile_Light", userSelect: "none"}}>ورود/ثبت
+                                    نام</p>
+                            </div>
+                            <div className="loginVectorVCode">
+                            </div>
+                            <p style={{paddingTop: "5px", fontSize: "20px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>کد را وارد کنید</p>
+                            <p onClick={this.backToNumber} style={{color:'#1C2A75'}}> تغیر شماره</p>
+
+                            <VerificationCodeInput sendCode={this.sendCode}/>
+
+                        </div>
+                    </div>
+                </Swipeable>
+            </div>
+        )
+        // if(this.props.pageSize === "small"){
+        //     return (this.smallPage)
+        // }else {
+        //     return (this.bigPage)
+        // }
     }
 
-
-    bigPage =
-        <div className="app" style={{height: "100%", textAlign: "center",transition:'0.2s ease'}}>
-
-            <Swipeable onSwipedDown={()=>{this.props.frontStatesPageSize("small")}} preventDefaultTouchmoveEvent={true}>
-            <div style={{height:"20px"}}/>
-                <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",height:'100%'}}>
-                    <div className="" style={bigMainContainerStyle}>
-                        {/*<Header/>*/}
-                        <div className='headerOfLogin'>
-                            <div className='userIcon'/>
-                            <p style={{paddingTop: "5px", fontFamily: "IRANSansMobile_Light", userSelect: "none"}}>ورود/ثبت
-                                نام</p>
-                        </div>
-                        <div className="loginVectorVCode">
-                        </div>
-                        <p style={{paddingTop: "5px", fontSize: "20px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>کد را وارد کنید</p>
-                        <p onClick={this.backToNumber} style={{color:'#1C2A75'}}> تغیر شماره</p>
-
-                        <VerificationCodeInput sendCode={this.sendCode}/>
-
-                    </div>
-                </div>
-            </Swipeable>
-        </div>;
-
-
-    smallPage =
-        <div style={{height: "100%",textAlign:"center"}}>
-            <Swipeable onSwipedUp={()=>{this.props.frontStatesPageSize("big")}} preventDefaultTouchmoveEvent={true}>
-                <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",}}>
-                    <div className="logi" style={smallMainContainerStyle} >
-                        {/*<Header/>*/}
-                        <p style={{paddingTop: "5px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>ورود/ثبت نام</p>
-                        <p style={{paddingTop: "5px", fontSize: "20px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>کد را وارد کنید</p>
-                        <p onClick={this.backToNumber} style={{color:'#1C2A75'}}> تغیر شماره</p>
-                        <VerificationCodeInput sendCode={this.sendCode}/>
-                    </div>
-                </div>
-            </Swipeable>
-        </div>
+    //
+    // bigPage =
+    //     <div className="app" style={{height: "100%", textAlign: "center",transition:'0.2s ease'}}>
+    //
+    //         <Swipeable onSwipedDown={()=>{this.props.frontStatesPageSize("small")}} preventDefaultTouchmoveEvent={true}>
+    //         <div style={{height:"20px"}}/>
+    //             <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",height:'100%'}}>
+    //                 <div className="" style={bigMainContainerStyle}>
+    //                     {/*<Header/>*/}
+    //                     <div className='headerOfLogin'>
+    //                         <div className='userIcon'/>
+    //                         <p style={{paddingTop: "5px", fontFamily: "IRANSansMobile_Light", userSelect: "none"}}>ورود/ثبت
+    //                             نام</p>
+    //                     </div>
+    //                     <div className="loginVectorVCode">
+    //                     </div>
+    //                     <p style={{paddingTop: "5px", fontSize: "20px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>کد را وارد کنید</p>
+    //                     <p onClick={this.backToNumber} style={{color:'#1C2A75'}}> تغیر شماره</p>
+    //
+    //                     <VerificationCodeInput sendCode={this.sendCode}/>
+    //
+    //                 </div>
+    //             </div>
+    //         </Swipeable>
+    //     </div>;
+    //
+    //
+    // smallPage =
+    //     <div style={{height: "100%",textAlign:"center"}}>
+    //         <Swipeable onSwipedUp={()=>{this.props.frontStatesPageSize("big")}} preventDefaultTouchmoveEvent={true}>
+    //             <div className="contain " style={{width: "100%", position: "absolute", bottom: "0",}}>
+    //                 <div className="logi" style={smallMainContainerStyle} >
+    //                     {/*<Header/>*/}
+    //                     <p style={{paddingTop: "5px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>ورود/ثبت نام</p>
+    //                     <p style={{paddingTop: "5px", fontSize: "20px", fontFamily: "IRANSansMobile_Light", userSelect:"none"}}>کد را وارد کنید</p>
+    //                     <p onClick={this.backToNumber} style={{color:'#1C2A75'}}> تغیر شماره</p>
+    //                     <VerificationCodeInput sendCode={this.sendCode}/>
+    //                 </div>
+    //             </div>
+    //         </Swipeable>
+    //     </div>
 }
 
 const mapStateToProps = (store) => {
