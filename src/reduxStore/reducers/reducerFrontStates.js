@@ -15,6 +15,10 @@ export default function reducerFrontStates (state = __init__FrontStates, action)
         return produce(state, draftState =>{
             draftState.sentVCode = action.payload.sentVCode
         })
+    }else if(actionTypes.SET_TOUR360_PHOTO === action.type){
+        return produce(state, draftState =>{
+            draftState.tour360Photo = action.payload.photo
+        })
     } else {
         return state;
     }

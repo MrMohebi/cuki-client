@@ -10,6 +10,7 @@ export const SET_RESTAURANT_DATA = "setRestaurantData"
 export const SET_PAGE_SIZE = "setPageSize"
 export const SET_HEADER_ORDER = "setHeaderOrder"
 export const SET_V_CODE = "setVCode"
+export const SET_TOUR360_PHOTO = "setTourPhoto"
 
 export const ADD_FOOD_TO_ORDERS = "addFoodToOrders"
 export const DELETE_FOOD_FROM_ORDERS = "deleteFoodFromOrders"

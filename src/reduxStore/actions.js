@@ -220,3 +220,13 @@ export const setOpenOrdersListInfo = (openOrdersList) =>{
     })
 }
 
+
+export const setTour360Photo = (photo) =>{
+    store.dispatch({
+        type: actionTypes.SET_TOUR360_PHOTO,
+        payload:{
+            photo
+        }
+    })
+}
+

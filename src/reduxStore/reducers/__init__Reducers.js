@@ -32,6 +32,7 @@ export const __init__FrontStates = {
     pageSize:"small",
     headerOrder:["profile","logo","menu"],
     sentVCode: false,
+    tour360Photo:"",
 }
 
 
