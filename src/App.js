@@ -22,7 +22,7 @@ function App() {
     return (
         <React.Fragment>
             <BrowserRouter>
-                <Route path='/main' component={Tour360}/>
+                {/*<Route path='/main' component={Tour360}/>*/}
 
                 <Route exact path='/' component={SplashScreen} />
                 <Route path='/profile' component={Profile}/>
