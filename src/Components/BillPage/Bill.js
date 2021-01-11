@@ -107,6 +107,7 @@ class Bill extends React.Component {
                                 {this.createOrderList()}
                             </SwipeableList>
                         </div>
+                        <div className="blur-border"/>
                         <div className='totalPriceHolder'>
                             <span className='billTotalPrice submitRed'>جمع نهایی فاکتور</span>
                             <span className="billTotalPrice">{this.sumTotalOrderPrice()} T</span>

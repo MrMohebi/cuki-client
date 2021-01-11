@@ -253,7 +253,7 @@
     color: orange;
 }
 .totalPriceHolder{
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-flow: row-reverse;
@@ -322,11 +322,14 @@
     border-radius: 10px;
 }
 #foods{
-    height: calc(100% - 270px);
+    height: calc(100% - 190px);
     width: 100%;
     overflow: scroll;
 }
 
-
-
+.blur-border{
+    box-shadow: 0 0 10px 10px #ffffff;
+    width: 100%;
+    position: absolute;
+}
 
