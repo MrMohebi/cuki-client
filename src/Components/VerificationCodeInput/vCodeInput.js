@@ -6,7 +6,7 @@ class VerificationCodeInput extends React.Component {
 
     oncomplete = ()=>{
         let out ="";
-       for (let i=1;i<=6;i++){
+       for (let i=1;i<=4;i++){
            out=out + $("#"+i).val();
        }
        if (out.length === 6){
@@ -42,7 +42,7 @@ class VerificationCodeInput extends React.Component {
     }
 
     render() {
-        const items = [1,2,3,4,5,6]
+        const items = [1,2,3,4]
         const listofinputs = items.map(input =>{
             return (
                 <input maxLength="1" autoComplete="off" key={input} id={input} type="number" onKeyDown={this.onKeyDown} onInput={this.goNext} onClick={this.emptyclick} style={eachInputStyle}/>
