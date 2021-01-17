@@ -24,6 +24,7 @@ class MainPage extends React.Component {
         isTouching: false,
         canIScroll: true,
         mainNavLinks: <div/>,
+        smallPageTrigger:false
 
     }
     restaurantCategories = []
@@ -86,6 +87,17 @@ class MainPage extends React.Component {
 
 
     foodSectionScrollHandler = () => {
+        console.log(document.getElementById('foodSection').scrollTop)
+        if (document.getElementById('foodSection').scrollTop === 0){
+            this.setState({
+                smallPageTrigger:true
+            })
+        }else {
+            this.setState({
+                smallPageTrigger:false
+            })
+        }
+
 
         Object.values(this.state.mainNavLinks).map(a => {
             if (document.getElementById(a.hash.replace("#", "")) && document.getElementById(a.hash.replace("#", "")).getBoundingClientRect().top < 280 && document.getElementById(a.hash.replace("#", "")).getBoundingClientRect().top > -10) {
@@ -447,11 +459,6 @@ class MainPage extends React.Component {
                 }}>
                     <Swipeable onSwipedDown={() => {
                         this.props.frontStatesPageSize("small")
-                        if (this.props.orderList.length) {
-                            $('#notificationNumber').css({visibility: 'visible'})
-                        }
-                        $('#notificationNumber').html(this.props.orderList.length)
-
 
                     }} preventDefaultTouchmoveEvent={true}>
                         <div className='mainHeader'>
@@ -499,25 +506,35 @@ class MainPage extends React.Component {
                             </nav>
                             {/*--------------------------------categories----------------------------*/}
                         </div>
-                        <div
 
-                            onTouchStart={() => {
-                                this.state.isTouching = true
-                            }}
-                            onScrollCapture={this.foodSectionScrollHandler}
+                            <Swipeable onSwipedDown={()=>{
+                                if (this.state.smallPageTrigger){
+                                    this.props.frontStatesPageSize('small')
+                                }
+                            }}>
+                                <div
+                                    onTouchStart={() => {
+                                        this.state.isTouching = true
 
-                            id='foodSection' style={{
-                            height: '100%',
-                            width: '100%',
+                                    }}
+                                    onScrollCapture={this.foodSectionScrollHandler}
 
-                            paddingRight: '20px',
-                            paddingLeft: '10px',
-                            overflow: 'scroll',
-                            paddingBottom: '10px'
-                        }}>
-                            {/*---------------------------------FoodsList-----------------------------*/}
-                            {this.state.foodList}
-                        </div>
+
+                                    id='foodSection' style={{
+                                    height: '100%',
+                                    with: '100%',
+
+                                    paddingRight: '20px',
+                                    paddingLeft: '10px',
+                                    overflow: 'scroll',
+                                    paddingBottom: '10px'
+                                }}>
+                                    {/*---------------------------------FoodsList-----------------------------*/}
+                                    {this.state.foodList}
+                                </div>
+                            </Swipeable>
+
+
                     </div>
                 </div>
             </React.Fragment>
