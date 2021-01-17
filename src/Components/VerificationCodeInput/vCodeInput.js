@@ -4,12 +4,13 @@ import BottomNavigation from "../BottomNavigation/BottomNavigation";
 
 class VerificationCodeInput extends React.Component {
 
+    codeDigitsNumber = 4;
     oncomplete = ()=>{
         let out ="";
        for (let i=1;i<=4;i++){
            out=out + $("#"+i).val();
        }
-       if (out.length === 6){
+       if (out.length === this.codeDigitsNumber){
            this.props.sendCode(out)
        }
     }
@@ -26,7 +27,7 @@ class VerificationCodeInput extends React.Component {
                 elem.target.value = ''
             }
         }
-        if (parseInt(elem.target.id) === 6){
+        if (parseInt(elem.target.id) === this.codeDigitsNumber){
             this.oncomplete()
         }
     }
